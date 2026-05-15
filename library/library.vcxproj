@@ -130,6 +130,12 @@
     <Text Include="requests.txt" />
     <Text Include="tests.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NoteLib.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="NoteLib.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

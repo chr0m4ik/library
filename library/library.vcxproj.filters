@@ -18,4 +18,14 @@
     <Text Include="requests.txt" />
     <Text Include="tests.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NoteLib.hpp">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="NoteLib.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>
