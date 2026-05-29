@@ -41,7 +41,7 @@ bool Notebook::deleteNote(int index) {
     return true;
 }
 
-int Notebook::size() const { return notes.size(); }
+int Notebook::size() const { return static_cast<int>(notes.size()); }
 
 const Note& Notebook::getNote(int index) const {
     return notes[index];
@@ -103,15 +103,22 @@ void runNotebookApp() {
         int choice = inputMenuChoice(std::cin, std::cout, 1, 5);
 
         if (choice == 1) {
+            std::system("cls");
             std::string desc = inputString(std::cin, std::cout, "Описание: ");
             int prio = inputPriority(std::cin, std::cout, "Приоритет (1-высокий, 3-низкий): ");
             nb.addNote(desc, prio);
             std::cout << "Заметка добавлена.\n";
+            std::system("pause");
+            std::system("cls");
         }
         else if (choice == 2) {
+            std::system("cls");
             nb.listNotes();
+            std::system("pause");
+            std::system("cls");
         }
         else if (choice == 3) {
+            std::system("cls");
             if (nb.size() == 0) {
                 std::cout << "Нет заметок.\n";
                 continue;
@@ -122,8 +129,13 @@ void runNotebookApp() {
                 std::cout << "Отмечено как выполненное.\n";
             else
                 std::cout << "Ошибка.\n";
+            std::system("cls");
+            nb.listNotes();
+            std::system("pause");
+            std::system("cls");
         }
         else if (choice == 4) {
+            std::system("cls");
             if (nb.size() == 0) {
                 std::cout << "Нет заметок.\n";
                 continue;
@@ -134,8 +146,13 @@ void runNotebookApp() {
                 std::cout << "Удалено.\n";
             else
                 std::cout << "Ошибка.\n";
+            std::system("cls");
+            nb.listNotes();
+            std::system("pause");
+            std::system("cls");
         }
         else if (choice == 5) {
+            std::system("cls");
             std::cout << "До свидания!\n";
             break;
         }
