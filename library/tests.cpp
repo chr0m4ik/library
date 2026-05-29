@@ -1,10 +1,12 @@
 #include "NoteLib.hpp"
+#include "tests.hpp"
 #include <cassert>
 #include <sstream>
 #include <iostream>
 
 #define ASSERT_MSG(condition, message) assert((condition) && (message))
 
+// Тест блокнота
 int test_note() {
     Note n("Купить хлеб", 2);
     ASSERT_MSG(n.getDescription() == "Купить хлеб", "getDescription failed");
@@ -57,7 +59,8 @@ int test_notebook_empty_operations() {
     return 0;
 }
 
-int main() {
+// Запуск
+int startTests() {
     if (test_note() != 0) return 1;
     if (test_notebook_add_and_list() != 0) return 1;
     if (test_notebook_mark_done() != 0) return 1;
